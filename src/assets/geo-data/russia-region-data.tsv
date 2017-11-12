@@ -1,85 +1,85 @@
 name	region	population
-Белгородская область	RU-BEL	1552900
-Брянская область	RU-BRY	1220500
-Владимирская область	RU-VLA	1389600
-Воронежская область	RU-VOR	2335400
-Ивановская область	RU-IVA	1023200
-Калужская область	RU-KLU	1014600
-Костромская область	RU-KOS	648200
-Курская область	RU-KRS	1122900
-Липецкая область	RU-LIP	1156200
-Город Москва	RU-MOW	12380700
-Московская область	RU-MOS	7423500
-Орловская область	RU-ORL	754800
-Рязанская область	RU-RYA	1126700
-Смоленская область	RU-SMO	953200
-Тамбовская область	RU-TAM	1040300
-Тверская область	RU-TVE	1296800
-Тульская область	RU-TUL	1499400
-Ярославская область	RU-YAR	1270700
-Республика Карелия	RU-KR	627100
-Республика Коми	RU-KO	850500
-Архангельская область	RU-ARK	1121800
-Вологодская область	RU-VLG	1183900
-Калининградская область	RU-KGD	986300
-Ленинградская область	RU-LEN	1791900
-Город Санкт-Петербург	RU-SPE	5281600
-Мурманская область	RU-MUR	757600
-Новгородская область	RU-NGR	612500
-Псковская область	RU-PSK	642200
-Ненецкий автономный округ	RU-NEN	43900
-Республика Адыгея	RU-AD	453400
-Республика Калмыкия	RU-KL	277800
-Краснодарский край	RU-KDA	5570900
-Астраханская область	RU-AST	1018900
-Волгоградская область	RU-VGG	2535200
-Ростовская область	RU-ROS	4231300
-Республика Дагестан	RU-DA	3041900
-Республика Ингушетия	RU-IN	480500
-Кабардино-Балкарская Республика	RU-KB	864400
-Карачаево-Черкесская Республика	RU-KC	466400
-Республика Северная Осетия	RU-SE	703300
-Чеченская Республика	RU-CE	1414900
-Ставропольский край	RU-STA	2804400
-Республика Башкортостан	RU-BA	4067000
-Республика Марий-Эл	RU-ME	684700
-Республика Мордовия	RU-MO	808500
-Республика Татарстан	RU-TA	3885200
-Удмуртская Республика	RU-UD	1516800
-Чувашская Республика	RU-CU	1235900
-Пермский край	RU-PER	2632100
-Кировская область	RU-KIR	1291700
-Нижегородская область	RU-NIZ	3247700
-Оренбургская область	RU-ORE	1989600
-Пензенская область	RU-PNZ	1341500
-Самарская область	RU-SAM	3203700
-Саратовская область	RU-SAR	2479200
-Ульяновская область	RU-ULY	1252900
-Курганская область	RU-KGN	854100
-Свердловская область	RU-SVE	4329400
-Тюменская область	RU-TYU	1477900
-Челябинская область	RU-CHE	3502300
-Ханты-мансийский автономный округ	RU-KHM	1646100
-Ямало-ненецкий автономный округ	RU-YAN	536000
-Республика Алтай	RU-AL	217000
-Республика Бурятия	RU-BU	984100
-Республика Тыва	RU-TY	318600
-Республика Хакасия	RU-KK	537700
-Алтайский край	RU-ALT	2365700
-Забайкальский край	RU-ZAB	1079000
-Красноярский край	RU-KYA	2875300
-Иркутская область	RU-IRK	2408900
-Кемеровская область	RU-KEM	2708800
-Новосибирская область	RU-NVS	2779500
-Омская область	RU-OMS	1972700
-Томская область	RU-TOM	1078900
-Республика Саха (Якутия)	RU-SA	962800
-Приморский край	RU-PRI	1923100
-Камчатский край	RU-KAM	314700
-Хабаровский край	RU-KHA	1333300
-Амурская область	RU-AMU	801800
-Магаданская область	RU-MAG	145600
-Сахалинская область	RU-SAK	487400
-Еврейская автономная область	RU-YEV	164200
-Чукотский автономный округ	RU-CHU	49800
-Чеченская Республика и Республика Ингушетия	RU-CE & RU-IN	1895400
+Belgorod Region	RU-BEL	1552900
+Bryansk Region	RU-BRY	1220500
+Vladimir Region	RU-VLA	1389600
+Voronezh Region	RU-VOR	2335400
+Ivanovo Region	RU-IVA	1023200
+Kaluga Region	RU-KLU	1014600
+Kostroma Region	RU-KOS	648200
+Kursk Region	RU-KRS	1122900
+Lipetsk Region	RU-LIP	1156200
+Moscow	RU-MOW	12380700
+Moscow Region	RU-MOS	7423500
+Orel Region	RU-ORL	754800
+Ryazan Region	RU-RYA	1126700
+Smolensk Region	RU-SMO	953200
+Tambov Region	RU-TAM	1040300
+Tver Region	RU-TVE	1296800
+Tula Region	RU-TUL	1499400
+Yaroslavl Region	RU-YAR	1270700
+Republic of Karelia	RU-KR	627100
+Komi Republic 	RU-KO	850500
+Arkhangelsk Region	RU-ARK	1121800
+Vologda Region	RU-VLG	1183900
+Kaliningrad Region	RU-KGD	986300
+Leningrad Region	RU-LEN	1791900
+St. Petersburg	RU-SPE	5281600
+Murmansk Region	RU-MUR	757600
+Novgorod Region	RU-NGR	612500
+Pskov Region	RU-PSK	642200
+Nenets Autonomous Area	RU-NEN	43900
+Republic of Adygeya 	RU-AD	453400
+Republic of Kalmykia	RU-KL	277800
+Krasnodar Territory	RU-KDA	5570900
+Astrakhan Region	RU-AST	1018900
+Volgograd Region	RU-VGG	2535200
+Rostov Region	RU-ROS	4231300
+Republic of Daghestan	RU-DA	3041900
+Republic of Ingushetia	RU-IN	480500
+Kabardino-Balkarian Republic	RU-KB	864400
+Karachayevo-Circassian Republic	RU-KC	466400
+Republic of North Ossetia – Alania	RU-SE	703300
+Chechen Republic	RU-CE	1414900
+Stavropol Territory	RU-STA	2804400
+Republic of Bashkortostan	RU-BA	4067000
+Republic of Mari El	RU-ME	684700
+Republic of Mordovia	RU-MO	808500
+Republic of Tatarstan	RU-TA	3885200
+Udmurtian Republic	RU-UD	1516800
+Chuvash Republic	RU-CU	1235900
+Perm Territory	RU-PER	2632100
+Kirov Region	RU-KIR	1291700
+Nizhny Novgorod Region	RU-NIZ	3247700
+Orenburg Region	RU-ORE	1989600
+Penza Region	RU-PNZ	1341500
+Samara Region	RU-SAM	3203700
+Saratov Region	RU-SAR	2479200
+Ulyanovsk Region	RU-ULY	1252900
+Kurgan Region	RU-KGN	854100
+Sverdlovsk Region	RU-SVE	4329400
+Tyumen Region	RU-TYU	1477900
+Chelyabinsk Region	RU-CHE	3502300
+Khanty-Mansi Autonomous Area – Yugra	RU-KHM	1646100
+Yamal-Nenets Autonomous Area	RU-YAN	536000
+Republic of Altai	RU-AL	217000
+Republic of Buryatia	RU-BU	984100
+Republic of Tuva 	RU-TY	318600
+Republic of Khakassia	RU-KK	537700
+Altai Territory	RU-ALT	2365700
+Trans-Baikal Territory	RU-ZAB	1079000
+Krasnoyarsk Territory	RU-KYA	2875300
+Irkutsk Region	RU-IRK	2408900
+Kemerovo Region	RU-KEM	2708800
+Novosibirsk Region	RU-NVS	2779500
+Omsk Region	RU-OMS	1972700
+Tomsk Region	RU-TOM	1078900
+Republic of Sakha (Yakutia)	RU-SA	962800
+Primorye Territory	RU-PRI	1923100
+Kamchatka Territory	RU-KAM	314700
+Khabarovsk Territory	RU-KHA	1333300
+Amur Region	RU-AMU	801800
+Magadan Region	RU-MAG	145600
+Sakhalin Region	RU-SAK	487400
+Jewish Autonomous Region	RU-YEV	164200
+Chukotka Autonomous Area	RU-CHU	49800
+Chechen Republic and Republic of Ingushetia	RU-CE & RU-IN	1895400
