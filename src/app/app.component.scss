@@ -1,0 +1,44 @@
+:host /deep/ {
+
+  .background {
+    fill: none;
+    pointer-events: all;
+  }
+
+  .feature {
+    fill: #ccc;
+    cursor: pointer;
+    stroke: white;
+    stroke-width: 0.5;
+
+  }
+
+  .feature.active {
+    fill: orange;
+  }
+
+  .circle {
+    fill: #67a9cf;
+    stroke: #fff;
+    opacity: 0.65;
+    cursor: pointer;
+  }
+
+  .circle.active{
+    opacity: 0.9;
+    stroke: #555;
+    stroke-width: 1;
+  }
+
+  .description {
+    position: absolute;
+    top: 9vh;
+    right: 14vw;
+    width: 250px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+}
+
+
