@@ -10,6 +10,7 @@ export interface GeoChartOptions {
   map: string;
   mapData: string;
   cities?: string;
+  year?: number;
 }
 
 export class GeoChart {
@@ -61,7 +62,7 @@ export class GeoChart {
       .defer(d3.tsv, this.options.mapData);
 
     if (this.options.cities) {
-      q.defer(d3.tsv, this.options.cities);
+      q.defer(d3.json, this.options.cities);
     }
 
     q.await(this.ready.bind(this));
@@ -88,18 +89,25 @@ export class GeoChart {
       .on('click', this.clickedRegion.bind(this));
 
     if (cities) {
-      this.g.selectAll('circle')
-        .data(cities)
-        .enter()
-        .append('circle')
+      const citiesMap = this.g.selectAll('circle')
+        .data(cities.cities)
+        .enter();
+
+      citiesMap.append('circle')
         .attr('cx', d => this.projection([d.lon, d.lat])[0])
         .attr('cy', d => this.projection([d.lon, d.lat])[1])
         .attr('r', d => {
-          const population = parseInt(d.population, 10) / 1000000;
+          const population = d.population.find((item) => item.year === this.options.year).amount / 1000;
           return population >= 10 ? 15 : population < 10 && population >= 5 ? 10 : 5;
         })
         .attr('class', 'circle')
         .on('click', this.clickedCity.bind(this));
+
+      citiesMap.append('text')
+        .attr('x', d => this.projection([d.lon, d.lat])[0])
+        .attr('y', d => this.projection([d.lon, d.lat])[1])
+        .style('font-size', '6px')
+        .text((d) => d.name);
 
       // add legend
       const legend = this.g.append('g')
@@ -181,7 +189,7 @@ export class GeoChart {
   }
 
   private zoomed() {
-    this.g.style('stroke-width', 0.5 / d3.event.transform.k + 'px');
+    this.g.style('stroke-width', 0.3 / d3.event.transform.k + 'px');
     this.g.attr('transform', d3.event.transform);
   }
 

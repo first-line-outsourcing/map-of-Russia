@@ -1,0 +1,1003 @@
+{
+  "cities": [
+    {
+      "name": "Moscow",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 11980
+        },
+        {
+          "year": 2014,
+          "amount": 12108
+        },
+        {
+          "year": 2015,
+          "amount": 12198
+        },
+        {
+          "year": 2016,
+          "amount": 12330
+        },
+        {
+          "year": 2017,
+          "amount": 12381
+        }
+      ],
+      "lat": 55.75,
+      "lon": 37.65
+    },
+    {
+      "name": "St.Petersburg",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 5028
+        },
+        {
+          "year": 2014,
+          "amount": 5131
+        },
+        {
+          "year": 2015,
+          "amount": 5192
+        },
+        {
+          "year": 2016,
+          "amount": 5226
+        },
+        {
+          "year": 2017,
+          "amount": 5282
+        }
+      ],
+      "lat": 59.57,
+      "lon": 30.19
+    },
+    {
+      "name": "Novosibirsk",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 1524
+        },
+        {
+          "year": 2014,
+          "amount": 1547
+        },
+        {
+          "year": 2015,
+          "amount": 1567
+        },
+        {
+          "year": 2016,
+          "amount": 1584
+        },
+        {
+          "year": 2017,
+          "amount": 1603
+        }
+      ],
+      "lat": 55.01,
+      "lon": 82.55
+    },
+    {
+      "name": "Yekaterinburg",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 1396
+        },
+        {
+          "year": 2014,
+          "amount": 1412
+        },
+        {
+          "year": 2015,
+          "amount": 1428
+        },
+        {
+          "year": 2016,
+          "amount": 1444
+        },
+        {
+          "year": 2017,
+          "amount": 1456
+        }
+      ],
+      "lat": 56.5,
+      "lon": 60.35
+    },
+    {
+      "name": "Nizhny Novgorod",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 1259
+        },
+        {
+          "year": 2014,
+          "amount": 1263
+        },
+        {
+          "year": 2015,
+          "amount": 1268
+        },
+        {
+          "year": 2016,
+          "amount": 1267
+        },
+        {
+          "year": 2017,
+          "amount": 1262
+        }
+      ],
+      "lat": 56.19,
+      "lon": 44
+    },
+    {
+      "name": "Kazan",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 1176
+        },
+        {
+          "year": 2014,
+          "amount": 1190
+        },
+        {
+          "year": 2015,
+          "amount": 1206
+        },
+        {
+          "year": 2016,
+          "amount": 1217
+        },
+        {
+          "year": 2017,
+          "amount": 1232
+        }
+      ],
+      "lat": 55.47,
+      "lon": 49.06
+    },
+    {
+      "name": "Chelyabinsk",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 1156
+        },
+        {
+          "year": 2014,
+          "amount": 1169
+        },
+        {
+          "year": 2015,
+          "amount": 1183
+        },
+        {
+          "year": 2016,
+          "amount": 1192
+        },
+        {
+          "year": 2017,
+          "amount": 1199
+        }
+      ],
+      "lat": 55.10,
+      "lon": 61.24
+    },
+    {
+      "name": "Omsk",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 1161
+        },
+        {
+          "year": 2014,
+          "amount": 1166
+        },
+        {
+          "year": 2015,
+          "amount": 1174
+        },
+        {
+          "year": 2016,
+          "amount": 1178
+        },
+        {
+          "year": 2017,
+          "amount": 1178
+        }
+      ],
+      "lat": 54.58,
+      "lon": 73.23
+    },
+    {
+      "name": "Samara",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 1171
+        },
+        {
+          "year": 2014,
+          "amount": 1172
+        },
+        {
+          "year": 2015,
+          "amount": 1172
+        },
+        {
+          "year": 2016,
+          "amount": 1171
+        },
+        {
+          "year": 2017,
+          "amount": 1170
+        }
+      ],
+      "lat": 53.11,
+      "lon": 50.07
+    },
+    {
+      "name": "Rostov-on-Done",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 1104
+        },
+        {
+          "year": 2014,
+          "amount": 1109
+        },
+        {
+          "year": 2015,
+          "amount": 1115
+        },
+        {
+          "year": 2016,
+          "amount": 1120
+        },
+        {
+          "year": 2017,
+          "amount": 1125
+        }
+      ],
+      "lat": 47.14,
+      "lon": 39.42
+    },
+    {
+      "name": "Ufa",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 1078
+        },
+        {
+          "year": 2014,
+          "amount": 1096
+        },
+        {
+          "year": 2015,
+          "amount": 1106
+        },
+        {
+          "year": 2016,
+          "amount": 1111
+        },
+        {
+          "year": 2017,
+          "amount": 1116
+        }
+      ],
+      "lat": 54.44,
+      "lon": 55.58
+    },
+    {
+      "name": "Krasnoyarsk",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 1016
+        },
+        {
+          "year": 2014,
+          "amount": 1035
+        },
+        {
+          "year": 2015,
+          "amount": 1052
+        },
+        {
+          "year": 2016,
+          "amount": 1067
+        },
+        {
+          "year": 2017,
+          "amount": 1083
+        }
+      ],
+      "lat": 56,
+      "lon": 92.52
+    },
+    {
+      "name": "Perm",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 1014
+        },
+        {
+          "year": 2014,
+          "amount": 1026
+        },
+        {
+          "year": 2015,
+          "amount": 1036
+        },
+        {
+          "year": 2016,
+          "amount": 1042
+        },
+        {
+          "year": 2017,
+          "amount": 1048
+        }
+      ],
+      "lat": 58,
+      "lon": 56.15
+    },
+    {
+      "name": "Voronezh",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 1004
+        },
+        {
+          "year": 2014,
+          "amount": 1014
+        },
+        {
+          "year": 2015,
+          "amount": 1024
+        },
+        {
+          "year": 2016,
+          "amount": 1032
+        },
+        {
+          "year": 2017,
+          "amount": 1040
+        }
+      ],
+      "lat": 51.4,
+      "lon": 39.12
+    },
+    {
+      "name": "Volgograd",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 1019
+        },
+        {
+          "year": 2014,
+          "amount": 1017
+        },
+        {
+          "year": 2015,
+          "amount": 1017
+        },
+        {
+          "year": 2016,
+          "amount": 1016
+        },
+        {
+          "year": 2017,
+          "amount": 1016
+        }
+      ],
+      "lat": 48.42,
+      "lon": 44.28
+    },
+    {
+      "name": "Krasnodar",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 784
+        },
+        {
+          "year": 2014,
+          "amount": 805
+        },
+        {
+          "year": 2015,
+          "amount": 830
+        },
+        {
+          "year": 2016,
+          "amount": 854
+        },
+        {
+          "year": 2017,
+          "amount": 881
+        }
+      ],
+      "lat": 45.02,
+      "lon": 38.59
+    },
+    {
+      "name": "Saratov",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 839
+        },
+        {
+          "year": 2014,
+          "amount": 840
+        },
+        {
+          "year": 2015,
+          "amount": 842
+        },
+        {
+          "year": 2016,
+          "amount": 843
+        },
+        {
+          "year": 2017,
+          "amount": 845
+        }
+      ],
+      "lat": 51.32,
+      "lon": 46
+    },
+    {
+      "name": "Tyumen",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 634
+        },
+        {
+          "year": 2014,
+          "amount": 679
+        },
+        {
+          "year": 2015,
+          "amount": 697
+        },
+        {
+          "year": 2016,
+          "amount": 720
+        },
+        {
+          "year": 2017,
+          "amount": 745
+        }
+      ],
+      "lat": 57.09,
+      "lon": 65.32
+    },
+    {
+      "name": "Togliatti",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 719
+        },
+        {
+          "year": 2014,
+          "amount": 718
+        },
+        {
+          "year": 2015,
+          "amount": 720
+        },
+        {
+          "year": 2016,
+          "amount": 713
+        },
+        {
+          "year": 2017,
+          "amount": 711
+        }
+      ],
+      "lat": 53.31,
+      "lon": 49.25
+    },
+    {
+      "name": "Izhevsk",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 633
+        },
+        {
+          "year": 2014,
+          "amount": 637
+        },
+        {
+          "year": 2015,
+          "amount": 642
+        },
+        {
+          "year": 2016,
+          "amount": 644
+        },
+        {
+          "year": 2017,
+          "amount": 646
+        }
+      ],
+      "lat": 56.51,
+      "lon": 53.13
+    },
+    {
+      "name": "Barnaul",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 630
+        },
+        {
+          "year": 2014,
+          "amount": 633
+        },
+        {
+          "year": 2015,
+          "amount": 636
+        },
+        {
+          "year": 2016,
+          "amount": 636
+        },
+        {
+          "year": 2017,
+          "amount": 633
+        }
+      ],
+      "lat": 53.20,
+      "lon": 83.46
+    },
+    {
+      "name": "Ulyanovsk",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 616
+        },
+        {
+          "year": 2014,
+          "amount": 616
+        },
+        {
+          "year": 2015,
+          "amount": 619
+        },
+        {
+          "year": 2016,
+          "amount": 622
+        },
+        {
+          "year": 2017,
+          "amount": 625
+        }
+      ],
+      "lat": 54.19,
+      "lon": 48.22
+    },
+    {
+      "name": "Irkutsk",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 606
+        },
+        {
+          "year": 2014,
+          "amount": 612
+        },
+        {
+          "year": 2015,
+          "amount": 620
+        },
+        {
+          "year": 2016,
+          "amount": 623
+        },
+        {
+          "year": 2017,
+          "amount": 624
+        }
+      ],
+      "lat": 52.17,
+      "lon": 104.18
+    },
+    {
+      "name": "Khabarovsk",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 594
+        },
+        {
+          "year": 2014,
+          "amount": 601
+        },
+        {
+          "year": 2015,
+          "amount": 607
+        },
+        {
+          "year": 2016,
+          "amount": 611
+        },
+        {
+          "year": 2017,
+          "amount": 616
+        }
+      ],
+      "lat": 48.29,
+      "lon": 135.04
+    },
+    {
+      "name": "Yaroslavl",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 599
+        },
+        {
+          "year": 2014,
+          "amount": 602
+        },
+        {
+          "year": 2015,
+          "amount": 604
+        },
+        {
+          "year": 2016,
+          "amount": 607
+        },
+        {
+          "year": 2017,
+          "amount": 608
+        }
+      ],
+      "lat": 57.37,
+      "lon": 39.51
+    },
+    {
+      "name": "Vladivostok",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 600
+        },
+        {
+          "year": 2014,
+          "amount": 603
+        },
+        {
+          "year": 2015,
+          "amount": 605
+        },
+        {
+          "year": 2016,
+          "amount": 607
+        },
+        {
+          "year": 2017,
+          "amount": 607
+        }
+      ],
+      "lat": 43.07,
+      "lon": 131.54
+    },
+    {
+      "name": "Makhachkala",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 576
+        },
+        {
+          "year": 2014,
+          "amount": 578
+        },
+        {
+          "year": 2015,
+          "amount": 583
+        },
+        {
+          "year": 2016,
+          "amount": 588
+        },
+        {
+          "year": 2017,
+          "amount": 593
+        }
+      ],
+      "lat": 42.58,
+      "lon": 47.29
+    },
+    {
+      "name": "Tomsk",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 548
+        },
+        {
+          "year": 2014,
+          "amount": 557
+        },
+        {
+          "year": 2015,
+          "amount": 564
+        },
+        {
+          "year": 2016,
+          "amount": 569
+        },
+        {
+          "year": 2017,
+          "amount": 573
+        }
+      ],
+      "lat": 56.29,
+      "lon": 84.57
+    },
+    {
+      "name": "Orenburg",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 556
+        },
+        {
+          "year": 2014,
+          "amount": 560
+        },
+        {
+          "year": 2015,
+          "amount": 561
+        },
+        {
+          "year": 2016,
+          "amount": 563
+        },
+        {
+          "year": 2017,
+          "amount": 564
+        }
+      ],
+      "lat": 51.47,
+      "lon": 55.06
+    },
+    {
+      "name": "Kemerovo",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 540
+        },
+        {
+          "year": 2014,
+          "amount": 544
+        },
+        {
+          "year": 2015,
+          "amount": 549
+        },
+        {
+          "year": 2016,
+          "amount": 553
+        },
+        {
+          "year": 2017,
+          "amount": 557
+        }
+      ],
+      "lat": 55.21,
+      "lon": 86.05
+    },
+    {
+      "name": "Novokuznetsk",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 549
+        },
+        {
+          "year": 2014,
+          "amount": 550
+        },
+        {
+          "year": 2015,
+          "amount": 550
+        },
+        {
+          "year": 2016,
+          "amount": 551
+        },
+        {
+          "year": 2017,
+          "amount": 552
+        }
+      ],
+      "lat": 53.44,
+      "lon": 87.05
+    },
+    {
+      "name": "Ryazan",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 528
+        },
+        {
+          "year": 2014,
+          "amount": 530
+        },
+        {
+          "year": 2015,
+          "amount": 533
+        },
+        {
+          "year": 2016,
+          "amount": 535
+        },
+        {
+          "year": 2017,
+          "amount": 538
+        }
+      ],
+      "lat": 54.37,
+      "lon": 39.43
+    },
+    {
+      "name": "Astrakhan",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 527
+        },
+        {
+          "year": 2014,
+          "amount": 531
+        },
+        {
+          "year": 2015,
+          "amount": 533
+        },
+        {
+          "year": 2016,
+          "amount": 532
+        },
+        {
+          "year": 2017,
+          "amount": 533
+        }
+      ],
+      "lat": 46.20,
+      "lon": 48.02
+    },
+    {
+      "name": "Naberezhnye Chelny",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 519
+        },
+        {
+          "year": 2014,
+          "amount": 522
+        },
+        {
+          "year": 2015,
+          "amount": 524
+        },
+        {
+          "year": 2016,
+          "amount": 527
+        },
+        {
+          "year": 2017,
+          "amount": 530
+        }
+      ],
+      "lat": 55.42,
+      "lon": 52.20
+    },
+    {
+      "name": "Penza",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 520
+        },
+        {
+          "year": 2014,
+          "amount": 521
+        },
+        {
+          "year": 2015,
+          "amount": 523
+        },
+        {
+          "year": 2016,
+          "amount": 525
+        },
+        {
+          "year": 2017,
+          "amount": 524
+        }
+      ],
+      "lat": 53.12,
+      "lon": 45
+    },
+    {
+      "name": "Lipetsk",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 509
+        },
+        {
+          "year": 2014,
+          "amount": 509
+        },
+        {
+          "year": 2015,
+          "amount": 510
+        },
+        {
+          "year": 2016,
+          "amount": 510
+        },
+        {
+          "year": 2017,
+          "amount": 510
+        }
+      ],
+      "lat": 52.37,
+      "lon": 39.36
+    },
+    {
+      "name": "Kirov",
+      "population": [
+        {
+          "year": 2013,
+          "amount": 487
+        },
+        {
+          "year": 2014,
+          "amount": 487
+        },
+        {
+          "year": 2015,
+          "amount": 493
+        },
+        {
+          "year": 2016,
+          "amount": 497
+        },
+        {
+          "year": 2017,
+          "amount": 501
+        }
+      ],
+      "lat": 58.36,
+      "lon": 49.39
+    }
+  ]
+}

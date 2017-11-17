@@ -10,7 +10,8 @@
     cursor: pointer;
     stroke: white;
     stroke-width: 0.5;
-
+    stroke-linejoin: round;
+    stroke-linecap: round;
   }
 
   .feature.active {
