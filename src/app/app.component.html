@@ -1,16 +1,56 @@
 <div class="container">
   <div class="row d-flex justify-content-center">
     <div class="col-auto">
-      <h2 class="h2 mt-1 mb-3">The population of Russia at the time of January 1, 2017</h2>
+      <h2 class="h2 mt-1 mb-3">Map of Russia</h2>
     </div>
   </div>
   <div class="row d-flex justify-content-center">
-    <div class="col-auto">
+    <div class="col-10">
       <svg #geoChart></svg>
     </div>
-    <div class="description p-2 text-center text-info" *ngIf="regionData">
-      <p>{{regionData.name}}</p>
-      <p>Population: {{getPopulation()}}</p>
+    <div class="col-2" [formGroup]="optionsForm">
+      <div class="row">
+        <div class="col">
+          <h5>Interactive legend</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label class="col-form-label" for="select-year">Selected year:</label>
+            <select formControlName="years" id="select-year" class="form-control">
+              <option disabled value="''">Select year</option>
+              <option [value]="year" *ngFor="let year of years">{{year}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label class="custom-control custom-checkbox">
+            <input formControlName="city" type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Cities</span>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label class="custom-control custom-checkbox">
+            <input formControlName="regions" type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Name of regions</span>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="p-2 text-center text-info" *ngIf="regionData">
+            <p>{{regionData.name}}</p>
+            <p>Population: {{getPopulation() | split}}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,1768 @@
+{
+  "regions": [
+    {
+      "name": "Belgorod Region",
+      "region": "RU-BEL",
+      "data": {
+        "2013": {
+          "population": 1541000
+        },
+        "2014": {
+          "population": 1544100
+        },
+        "2015": {
+          "population": 1547900
+        },
+        "2016": {
+          "population": 1550100
+        },
+        "2017": {
+          "population": 1552900
+        }
+      }
+    },
+    {
+      "name": "Bryansk Region",
+      "region": "RU-BRY",
+      "data": {
+        "2013": {
+          "population": 1253600
+        },
+        "2014": {
+          "population": 1242600
+        },
+        "2015": {
+          "population": 1233000
+        },
+        "2016": {
+          "population": 1225800
+        },
+        "2017": {
+          "population": 1220500
+        }
+      }
+    },
+    {
+      "name": "Vladimir Region",
+      "region": "RU-VLA",
+      "data": {
+        "2013": {
+          "population": 1421700
+        },
+        "2014": {
+          "population": 1413300
+        },
+        "2015": {
+          "population": 1405600
+        },
+        "2016": {
+          "population": 1397200
+        },
+        "2017": {
+          "population": 1389600
+        }
+      }
+    },
+    {
+      "name": "Voronezh Region",
+      "region": "RU-VOR",
+      "data": {
+        "2013": {
+          "population": 2330400
+        },
+        "2014": {
+          "population": 2328900
+        },
+        "2015": {
+          "population": 2331100
+        },
+        "2016": {
+          "population": 2333500
+        },
+        "2017": {
+          "population": 2335400
+        }
+      }
+    },
+    {
+      "name": "Ivanovo Region",
+      "region": "RU-IVA",
+      "data": {
+        "2013": {
+          "population": 1049000
+        },
+        "2014": {
+          "population": 1043100
+        },
+        "2015": {
+          "population": 1036900
+        },
+        "2016": {
+          "population": 1029800
+        },
+        "2017": {
+          "population": 1023200
+        }
+      }
+    },
+    {
+      "name": "Kaluga Region",
+      "region": "RU-KLU",
+      "data": {
+        "2013": {
+          "population": 1005600
+        },
+        "2014": {
+          "population": 1004600
+        },
+        "2015": {
+          "population": 1010500
+        },
+        "2016": {
+          "population": 1009800
+        },
+        "2017": {
+          "population": 1014600
+        }
+      }
+    },
+    {
+      "name": "Kostroma Region",
+      "region": "RU-KOS",
+      "data": {
+        "2013": {
+          "population": 658900
+        },
+        "2014": {
+          "population": 656400
+        },
+        "2015": {
+          "population": 654400
+        },
+        "2016": {
+          "population": 651500
+        },
+        "2017": {
+          "population": 648200
+        }
+      }
+    },
+    {
+      "name": "Kursk Region",
+      "region": "RU-KRS",
+      "data": {
+        "2013": {
+          "population": 1119300
+        },
+        "2014": {
+          "population": 1118900
+        },
+        "2015": {
+          "population": 1117400
+        },
+        "2016": {
+          "population": 1120000
+        },
+        "2017": {
+          "population": 1122900
+        }
+      }
+    },
+    {
+      "name": "Lipetsk Region",
+      "region": "RU-LIP",
+      "data": {
+        "2013": {
+          "population": 1162200
+        },
+        "2014": {
+          "population": 1159900
+        },
+        "2015": {
+          "population": 1157900
+        },
+        "2016": {
+          "population": 1156100
+        },
+        "2017": {
+          "population": 1156200
+        }
+      }
+    },
+    {
+      "name": "Moscow",
+      "region": "RU-MOW",
+      "data": {
+        "2013": {
+          "population": 11979500
+        },
+        "2014": {
+          "population": 12108300
+        },
+        "2015": {
+          "population": 12197600
+        },
+        "2016": {
+          "population": 12330100
+        },
+        "2017": {
+          "population": 12380700
+        }
+      }
+    },
+    {
+      "name": "Moscow Region",
+      "region": "RU-MOS",
+      "data": {
+        "2013": {
+          "population": 7048100
+        },
+        "2014": {
+          "population": 7133600
+        },
+        "2015": {
+          "population": 7231100
+        },
+        "2016": {
+          "population": 7318600
+        },
+        "2017": {
+          "population": 7423500
+        }
+      }
+    },
+    {
+      "name": "Orel Region",
+      "region": "RU-ORL",
+      "data": {
+        "2013": {
+          "population": 775800
+        },
+        "2014": {
+          "population": 770000
+        },
+        "2015": {
+          "population": 765200
+        },
+        "2016": {
+          "population": 759700
+        },
+        "2017": {
+          "population": 754800
+        }
+      }
+    },
+    {
+      "name": "Ryazan Region",
+      "region": "RU-RYA",
+      "data": {
+        "2013": {
+          "population": 1144700
+        },
+        "2014": {
+          "population": 1140800
+        },
+        "2015": {
+          "population": 1135400
+        },
+        "2016": {
+          "population": 1130100
+        },
+        "2017": {
+          "population": 1126700
+        }
+      }
+    },
+    {
+      "name": "Smolensk Region",
+      "region": "RU-SMO",
+      "data": {
+        "2013": {
+          "population": 975200
+        },
+        "2014": {
+          "population": 967900
+        },
+        "2015": {
+          "population": 964800
+        },
+        "2016": {
+          "population": 958600
+        },
+        "2017": {
+          "population": 953200
+        }
+      }
+    },
+    {
+      "name": "Tambov Region",
+      "region": "RU-TAM",
+      "data": {
+        "2013": {
+          "population": 1075700
+        },
+        "2014": {
+          "population": 1068900
+        },
+        "2015": {
+          "population": 1062400
+        },
+        "2016": {
+          "population": 1050300
+        },
+        "2017": {
+          "population": 1040300
+        }
+      }
+    },
+    {
+      "name": "Tver Region",
+      "region": "RU-TVE",
+      "data": {
+        "2013": {
+          "population": 1334100
+        },
+        "2014": {
+          "population": 1325300
+        },
+        "2015": {
+          "population": 1315100
+        },
+        "2016": {
+          "population": 1304800
+        },
+        "2017": {
+          "population": 1296800
+        }
+      }
+    },
+    {
+      "name": "Tula Region",
+      "region": "RU-TUL",
+      "data": {
+        "2013": {
+          "population": 1532400
+        },
+        "2014": {
+          "population": 1521500
+        },
+        "2015": {
+          "population": 1513600
+        },
+        "2016": {
+          "population": 1506400
+        },
+        "2017": {
+          "population": 1499400
+        }
+      }
+    },
+    {
+      "name": "Yaroslavl Region",
+      "region": "RU-YAR",
+      "data": {
+        "2013": {
+          "population": 1271700
+        },
+        "2014": {
+          "population": 1271800
+        },
+        "2015": {
+          "population": 1271600
+        },
+        "2016": {
+          "population": 1271900
+        },
+        "2017": {
+          "population": 1270700
+        }
+      }
+    },
+    {
+      "name": "Republic of Karelia",
+      "region": "RU-KR",
+      "data": {
+        "2013": {
+          "population": 636900
+        },
+        "2014": {
+          "population": 634400
+        },
+        "2015": {
+          "population": 632500
+        },
+        "2016": {
+          "population": 629900
+        },
+        "2017": {
+          "population": 627100
+        }
+      }
+    },
+    {
+      "name": "Komi Republic",
+      "region": "RU-KO",
+      "data": {
+        "2013": {
+          "population": 880700
+        },
+        "2014": {
+          "population": 872000
+        },
+        "2015": {
+          "population": 864500
+        },
+        "2016": {
+          "population": 856800
+        },
+        "2017": {
+          "population": 850500
+        }
+      }
+    },
+    {
+      "name": "Arkhangelsk Region",
+      "region": "RU-ARK",
+      "data": {
+        "2013": {
+          "population": 1159500
+        },
+        "2014": {
+          "population": 1148800
+        },
+        "2015": {
+          "population": 1139900
+        },
+        "2016": {
+          "population": 1130200
+        },
+        "2017": {
+          "population": 1121800
+        }
+      }
+    },
+    {
+      "name": "Vologda Region",
+      "region": "RU-VLG",
+      "data": {
+        "2013": {
+          "population": 1196200
+        },
+        "2014": {
+          "population": 1193400
+        },
+        "2015": {
+          "population": 1191000
+        },
+        "2016": {
+          "population": 1187700
+        },
+        "2017": {
+          "population": 1183900
+        }
+      }
+    },
+    {
+      "name": "Kaliningrad Region",
+      "region": "RU-KGD",
+      "data": {
+        "2013": {
+          "population": 954800
+        },
+        "2014": {
+          "population": 963100
+        },
+        "2015": {
+          "population": 969000
+        },
+        "2016": {
+          "population": 976400
+        },
+        "2017": {
+          "population": 986300
+        }
+      }
+    },
+    {
+      "name": "Leningrad Region",
+      "region": "RU-LEN",
+      "data": {
+        "2013": {
+          "population": 1751100
+        },
+        "2014": {
+          "population": 1763900
+        },
+        "2015": {
+          "population": 1775500
+        },
+        "2016": {
+          "population": 1778800
+        },
+        "2017": {
+          "population": 1791900
+        }
+      }
+    },
+    {
+      "name": "St. Petersburg",
+      "region": "RU-SPE",
+      "data": {
+        "2013": {
+          "population": 5028000
+        },
+        "2014": {
+          "population": 5132000
+        },
+        "2015": {
+          "population": 5191700
+        },
+        "2016": {
+          "population": 5225700
+        },
+        "2017": {
+          "population": 5281600
+        }
+      }
+    },
+    {
+      "name": "Murmansk Region",
+      "region": "RU-MUR",
+      "data": {
+        "2013": {
+          "population": 780400
+        },
+        "2014": {
+          "population": 771100
+        },
+        "2015": {
+          "population": 766300
+        },
+        "2016": {
+          "population": 762200
+        },
+        "2017": {
+          "population": 757600
+        }
+      }
+    },
+    {
+      "name": "Novgorod Region",
+      "region": "RU-NGR",
+      "data": {
+        "2013": {
+          "population": 625900
+        },
+        "2014": {
+          "population": 622400
+        },
+        "2015": {
+          "population": 618700
+        },
+        "2016": {
+          "population": 615700
+        },
+        "2017": {
+          "population": 612500
+        }
+      }
+    },
+    {
+      "name": "Pskov Region",
+      "region": "RU-PSK",
+      "data": {
+        "2013": {
+          "population": 661500
+        },
+        "2014": {
+          "population": 656600
+        },
+        "2015": {
+          "population": 651100
+        },
+        "2016": {
+          "population": 646400
+        },
+        "2017": {
+          "population": 642200
+        }
+      }
+    },
+    {
+      "name": "Nenets Autonomous Area",
+      "region": "RU-NEN",
+      "data": {
+        "2013": {
+          "population": 42800
+        },
+        "2014": {
+          "population": 43000
+        },
+        "2015": {
+          "population": 43400
+        },
+        "2016": {
+          "population": 43900
+        },
+        "2017": {
+          "population": 43900
+        }
+      }
+    },
+    {
+      "name": "Republic of Adygeya",
+      "region": "RU-AD",
+      "data": {
+        "2013": {
+          "population": 444400
+        },
+        "2014": {
+          "population": 446400
+        },
+        "2015": {
+          "population": 449200
+        },
+        "2016": {
+          "population": 451500
+        },
+        "2017": {
+          "population": 453400
+        }
+      }
+    },
+    {
+      "name": "Republic of Kalmykia",
+      "region": "RU-KL",
+      "data": {
+        "2013": {
+          "population": 284100
+        },
+        "2014": {
+          "population": 282000
+        },
+        "2015": {
+          "population": 280500
+        },
+        "2016": {
+          "population": 248800
+        },
+        "2017": {
+          "population": 277800
+        }
+      }
+    },
+    {
+      "name": "Krasnodar Territory",
+      "region": "RU-KDA",
+      "data": {
+        "2013": {
+          "population": 5330200
+        },
+        "2014": {
+          "population": 5404300
+        },
+        "2015": {
+          "population": 5453300
+        },
+        "2016": {
+          "population": 5513800
+        },
+        "2017": {
+          "population": 5570900
+        }
+      }
+    },
+    {
+      "name": "Astrakhan Region",
+      "region": "RU-AST",
+      "data": {
+        "2013": {
+          "population": 1013900
+        },
+        "2014": {
+          "population": 1016500
+        },
+        "2015": {
+          "population": 1021300
+        },
+        "2016": {
+          "population": 1018600
+        },
+        "2017": {
+          "population": 1018900
+        }
+      }
+    },
+    {
+      "name": "Volgograd Region",
+      "region": "RU-VGG",
+      "data": {
+        "2013": {
+          "population": 2583000
+        },
+        "2014": {
+          "population": 2569100
+        },
+        "2015": {
+          "population": 2557400
+        },
+        "2016": {
+          "population": 2545900
+        },
+        "2017": {
+          "population": 2535200
+        }
+      }
+    },
+    {
+      "name": "Rostov Region",
+      "region": "RU-ROS",
+      "data": {
+        "2013": {
+          "population": 4254600
+        },
+        "2014": {
+          "population": 4245600
+        },
+        "2015": {
+          "population": 4242100
+        },
+        "2016": {
+          "population": 4236000
+        },
+        "2017": {
+          "population": 4231300
+        }
+      }
+    },
+    {
+      "name": "Republic of Daghestan",
+      "region": "RU-DA",
+      "data": {
+        "2013": {
+          "population": 2946000
+        },
+        "2014": {
+          "population": 2963900
+        },
+        "2015": {
+          "population": 2990400
+        },
+        "2016": {
+          "population": 3015700
+        },
+        "2017": {
+          "population": 3041900
+        }
+      }
+    },
+    {
+      "name": "Republic of Ingushetia",
+      "region": "RU-IN",
+      "data": {
+        "2013": {
+          "population": 442300
+        },
+        "2014": {
+          "population": 453000
+        },
+        "2015": {
+          "population": 463900
+        },
+        "2016": {
+          "population": 472800
+        },
+        "2017": {
+          "population": 480500
+        }
+      }
+    },
+    {
+      "name": "Kabardino-Balkarian Republic",
+      "region": "RU-KB",
+      "data": {
+        "2013": {
+          "population": 858900
+        },
+        "2014": {
+          "population": 858400
+        },
+        "2015": {
+          "population": 860700
+        },
+        "2016": {
+          "population": 862200
+        },
+        "2017": {
+          "population": 864400
+        }
+      }
+    },
+    {
+      "name": "Karachayevo-Circassian Republic",
+      "region": "RU-KC",
+      "data": {
+        "2013": {
+          "population": 471900
+        },
+        "2014": {
+          "population": 469900
+        },
+        "2015": {
+          "population": 469000
+        },
+        "2016": {
+          "population": 467800
+        },
+        "2017": {
+          "population": 466400
+        }
+      }
+    },
+    {
+      "name": "Republic of North Ossetia – Alania",
+      "region": "RU-SE",
+      "data": {
+        "2013": {
+          "population": 706100
+        },
+        "2014": {
+          "population": 704000
+        },
+        "2015": {
+          "population": 705200
+        },
+        "2016": {
+          "population": 703700
+        },
+        "2017": {
+          "population": 703300
+        }
+      }
+    },
+    {
+      "name": "Chechen Republic",
+      "region": "RU-CE",
+      "data": {
+        "2013": {
+          "population": 1324800
+        },
+        "2014": {
+          "population": 1346400
+        },
+        "2015": {
+          "population": 1370300
+        },
+        "2016": {
+          "population": 1394200
+        },
+        "2017": {
+          "population": 1414900
+        }
+      }
+    },
+    {
+      "name": "Stavropol Territory",
+      "region": "RU-STA",
+      "data": {
+        "2013": {
+          "population": 2790800
+        },
+        "2014": {
+          "population": 2794500
+        },
+        "2015": {
+          "population": 2799500
+        },
+        "2016": {
+          "population": 2801600
+        },
+        "2017": {
+          "population": 2804400
+        }
+      }
+    },
+    {
+      "name": "Republic of Bashkortostan",
+      "region": "RU-BA",
+      "data": {
+        "2013": {
+          "population": 4060900
+        },
+        "2014": {
+          "population": 4069700
+        },
+        "2015": {
+          "population": 4072000
+        },
+        "2016": {
+          "population": 4071100
+        },
+        "2017": {
+          "population": 4067000
+        }
+      }
+    },
+    {
+      "name": "Republic of Mari El",
+      "region": "RU-ME",
+      "data": {
+        "2013": {
+          "population": 690300
+        },
+        "2014": {
+          "population": 688700
+        },
+        "2015": {
+          "population": 687400
+        },
+        "2016": {
+          "population": 685900
+        },
+        "2017": {
+          "population": 684700
+        }
+      }
+    },
+    {
+      "name": "Republic of Mordovia",
+      "region": "RU-MO",
+      "data": {
+        "2013": {
+          "population": 818600
+        },
+        "2014": {
+          "population": 812100
+        },
+        "2015": {
+          "population": 808900
+        },
+        "2016": {
+          "population": 807400
+        },
+        "2017": {
+          "population": 808500
+        }
+      }
+    },
+    {
+      "name": "Republic of Tatarstan",
+      "region": "RU-TA",
+      "data": {
+        "2013": {
+          "population": 3822000
+        },
+        "2014": {
+          "population": 3838200
+        },
+        "2015": {
+          "population": 3855000
+        },
+        "2016": {
+          "population": 3868700
+        },
+        "2017": {
+          "population": 3885200
+        }
+      }
+    },
+    {
+      "name": "Udmurtian Republic",
+      "region": "RU-UD",
+      "data": {
+        "2013": {
+          "population": 1517700
+        },
+        "2014": {
+          "population": 1517000
+        },
+        "2015": {
+          "population": 1517500
+        },
+        "2016": {
+          "population": 1517200
+        },
+        "2017": {
+          "population": 1516800
+        }
+      }
+    },
+    {
+      "name": "Chuvash Republic",
+      "region": "RU-CU",
+      "data": {
+        "2013": {
+          "population": 1243400
+        },
+        "2014": {
+          "population": 1240000
+        },
+        "2015": {
+          "population": 1238100
+        },
+        "2016": {
+          "population": 1236600
+        },
+        "2017": {
+          "population": 1235900
+        }
+      }
+    },
+    {
+      "name": "Perm Territory",
+      "region": "RU-PER",
+      "data": {
+        "2013": {
+          "population": 2634500
+        },
+        "2014": {
+          "population": 2636200
+        },
+        "2015": {
+          "population": 2637000
+        },
+        "2016": {
+          "population": 2634400
+        },
+        "2017": {
+          "population": 2632100
+        }
+      }
+    },
+    {
+      "name": "Kirov Region",
+      "region": "RU-KIR",
+      "data": {
+        "2013": {
+          "population": 1319100
+        },
+        "2014": {
+          "population": 1310900
+        },
+        "2015": {
+          "population": 1304400
+        },
+        "2016": {
+          "population": 1297500
+        },
+        "2017": {
+          "population": 1291700
+        }
+      }
+    },
+    {
+      "name": "Nizhny Novgorod Region",
+      "region": "RU-NIZ",
+      "data": {
+        "2013": {
+          "population": 3289800
+        },
+        "2014": {
+          "population": 3281500
+        },
+        "2015": {
+          "population": 3270200
+        },
+        "2016": {
+          "population": 3260300
+        },
+        "2017": {
+          "population": 3247700
+        }
+      }
+    },
+    {
+      "name": "Orenburg Region",
+      "region": "RU-ORE",
+      "data": {
+        "2013": {
+          "population": 2016100
+        },
+        "2014": {
+          "population": 2008500
+        },
+        "2015": {
+          "population": 2001100
+        },
+        "2016": {
+          "population": 1994700
+        },
+        "2017": {
+          "population": 1989600
+        }
+      }
+    },
+    {
+      "name": "Penza Region",
+      "region": "RU-PNZ",
+      "data": {
+        "2013": {
+          "population": 1368700
+        },
+        "2014": {
+          "population": 1360600
+        },
+        "2015": {
+          "population": 1355600
+        },
+        "2016": {
+          "population": 1348700
+        },
+        "2017": {
+          "population": 1341500
+        }
+      }
+    },
+    {
+      "name": "Samara Region",
+      "region": "RU-SAM",
+      "data": {
+        "2013": {
+          "population": 3213300
+        },
+        "2014": {
+          "population": 3211200
+        },
+        "2015": {
+          "population": 3212700
+        },
+        "2016": {
+          "population": 3206000
+        },
+        "2017": {
+          "population": 3203700
+        }
+      }
+    },
+    {
+      "name": "Saratov Region",
+      "region": "RU-SAR",
+      "data": {
+        "2013": {
+          "population": 2503300
+        },
+        "2014": {
+          "population": 2496600
+        },
+        "2015": {
+          "population": 2493000
+        },
+        "2016": {
+          "population": 2487500
+        },
+        "2017": {
+          "population": 2479200
+        }
+      }
+    },
+    {
+      "name": "Ulyanovsk Region",
+      "region": "RU-ULY",
+      "data": {
+        "2013": {
+          "population": 1274500
+        },
+        "2014": {
+          "population": 1267600
+        },
+        "2015": {
+          "population": 1262600
+        },
+        "2016": {
+          "population": 1257600
+        },
+        "2017": {
+          "population": 1252900
+        }
+      }
+    },
+    {
+      "name": "Kurgan Region",
+      "region": "RU-KGN",
+      "data": {
+        "2013": {
+          "population": 885700
+        },
+        "2014": {
+          "population": 877100
+        },
+        "2015": {
+          "population": 869800
+        },
+        "2016": {
+          "population": 861900
+        },
+        "2017": {
+          "population": 854100
+        }
+      }
+    },
+    {
+      "name": "Sverdlovsk Region",
+      "region": "RU-SVE",
+      "data": {
+        "2013": {
+          "population": 4315800
+        },
+        "2014": {
+          "population": 4320700
+        },
+        "2015": {
+          "population": 4327400
+        },
+        "2016": {
+          "population": 4330000
+        },
+        "2017": {
+          "population": 4329400
+        }
+      }
+    },
+    {
+      "name": "Tyumen Region",
+      "region": "RU-TYU",
+      "data": {
+        "2013": {
+          "population": 1385000
+        },
+        "2014": {
+          "population": 1409400
+        },
+        "2015": {
+          "population": 1429200
+        },
+        "2016": {
+          "population": 1454600
+        },
+        "2017": {
+          "population": 1477900
+        }
+      }
+    },
+    {
+      "name": "Chelyabinsk Region",
+      "region": "RU-CHE",
+      "data": {
+        "2013": {
+          "population": 3485300
+        },
+        "2014": {
+          "population": 3490100
+        },
+        "2015": {
+          "population": 3497300
+        },
+        "2016": {
+          "population": 3500700
+        },
+        "2017": {
+          "population": 3502300
+        }
+      }
+    },
+    {
+      "name": "Khanty-Mansi Autonomous Area – Yugra",
+      "region": "RU-KHM",
+      "data": {
+        "2013": {
+          "population": 1584100
+        },
+        "2014": {
+          "population": 1597200
+        },
+        "2015": {
+          "population": 1612100
+        },
+        "2016": {
+          "population": 1626800
+        },
+        "2017": {
+          "population": 1646100
+        }
+      }
+    },
+    {
+      "name": "Yamal-Nenets Autonomous Area",
+      "region": "RU-YAN",
+      "data": {
+        "2013": {
+          "population": 541600
+        },
+        "2014": {
+          "population": 539700
+        },
+        "2015": {
+          "population": 540000
+        },
+        "2016": {
+          "population": 534100
+        },
+        "2017": {
+          "population": 536000
+        }
+      }
+    },
+    {
+      "name": "Republic of Altai",
+      "region": "RU-AL",
+      "data": {
+        "2013": {
+          "population": 210300
+        },
+        "2014": {
+          "population": 211600
+        },
+        "2015": {
+          "population": 213700
+        },
+        "2016": {
+          "population": 215200
+        },
+        "2017": {
+          "population": 217000
+        }
+      }
+    },
+    {
+      "name": "Republic of Buryatia",
+      "region": "RU-BU",
+      "data": {
+        "2013": {
+          "population": 971800
+        },
+        "2014": {
+          "population": 973900
+        },
+        "2015": {
+          "population": 978500
+        },
+        "2016": {
+          "population": 982300
+        },
+        "2017": {
+          "population": 984100
+        }
+      }
+    },
+    {
+      "name": "Republic of Tuva",
+      "region": "RU-TY",
+      "data": {
+        "2013": {
+          "population": 310500
+        },
+        "2014": {
+          "population": 311700
+        },
+        "2015": {
+          "population": 313800
+        },
+        "2016": {
+          "population": 315600
+        },
+        "2017": {
+          "population": 318600
+        }
+      }
+    },
+    {
+      "name": "Republic of Khakassia",
+      "region": "RU-KK",
+      "data": {
+        "2013": {
+          "population": 533000
+        },
+        "2014": {
+          "population": 534100
+        },
+        "2015": {
+          "population": 535800
+        },
+        "2016": {
+          "population": 536800
+        },
+        "2017": {
+          "population": 537700
+        }
+      }
+    },
+    {
+      "name": "Altai Territory",
+      "region": "RU-ALT",
+      "data": {
+        "2013": {
+          "population": 2398700
+        },
+        "2014": {
+          "population": 2390600
+        },
+        "2015": {
+          "population": 2384800
+        },
+        "2016": {
+          "population": 2376700
+        },
+        "2017": {
+          "population": 2365700
+        }
+      }
+    },
+    {
+      "name": "Trans-Baikal Territory",
+      "region": "RU-ZAB",
+      "data": {
+        "2013": {
+          "population": 1095200
+        },
+        "2014": {
+          "population": 1090400
+        },
+        "2015": {
+          "population": 1087500
+        },
+        "2016": {
+          "population": 108300
+        },
+        "2017": {
+          "population": 1079000
+        }
+      }
+    },
+    {
+      "name": "Krasnoyarsk Territory",
+      "region": "RU-KYA",
+      "data": {
+        "2013": {
+          "population": 2846500
+        },
+        "2014": {
+          "population": 2852800
+        },
+        "2015": {
+          "population": 2858800
+        },
+        "2016": {
+          "population": 2866500
+        },
+        "2017": {
+          "population": 2875300
+        }
+      }
+    },
+    {
+      "name": "Irkutsk Region",
+      "region": "RU-IRK",
+      "data": {
+        "2013": {
+          "population": 2422000
+        },
+        "2014": {
+          "population": 2418300
+        },
+        "2015": {
+          "population": 2414900
+        },
+        "2016": {
+          "population": 2412800
+        },
+        "2017": {
+          "population": 2408900
+        }
+      }
+    },
+    {
+      "name": "Kemerovo Region",
+      "region": "RU-KEM",
+      "data": {
+        "2013": {
+          "population": 2742500
+        },
+        "2014": {
+          "population": 2734100
+        },
+        "2015": {
+          "population": 2725000
+        },
+        "2016": {
+          "population": 2717600
+        },
+        "2017": {
+          "population": 2708800
+        }
+      }
+    },
+    {
+      "name": "Novosibirsk Region",
+      "region": "RU-NVS",
+      "data": {
+        "2013": {
+          "population": 2709500
+        },
+        "2014": {
+          "population": 2731200
+        },
+        "2015": {
+          "population": 2746800
+        },
+        "2016": {
+          "population": 2762200
+        },
+        "2017": {
+          "population": 2779500
+        }
+      }
+    },
+    {
+      "name": "Omsk Region",
+      "region": "RU-OMS",
+      "data": {
+        "2013": {
+          "population": 1974000
+        },
+        "2014": {
+          "population": 1973900
+        },
+        "2015": {
+          "population": 1978200
+        },
+        "2016": {
+          "population": 1978500
+        },
+        "2017": {
+          "population": 1972700
+        }
+      }
+    },
+    {
+      "name": "Tomsk Region",
+      "region": "RU-TOM",
+      "data": {
+        "2013": {
+          "population": 1064200
+        },
+        "2014": {
+          "population": 1070100
+        },
+        "2015": {
+          "population": 1074400
+        },
+        "2016": {
+          "population": 1076800
+        },
+        "2017": {
+          "population": 1078900
+        }
+      }
+    },
+    {
+      "name": "Republic of Sakha (Yakutia)",
+      "region": "RU-SA",
+      "data": {
+        "2013": {
+          "population": 955600
+        },
+        "2014": {
+          "population": 954800
+        },
+        "2015": {
+          "population": 956900
+        },
+        "2016": {
+          "population": 959700
+        },
+        "2017": {
+          "population": 962800
+        }
+      }
+    },
+    {
+      "name": "Primorye Territory",
+      "region": "RU-PRI",
+      "data": {
+        "2013": {
+          "population": 1947200
+        },
+        "2014": {
+          "population": 1938500
+        },
+        "2015": {
+          "population": 1933300
+        },
+        "2016": {
+          "population": 1929000
+        },
+        "2017": {
+          "population": 1923100
+        }
+      }
+    },
+    {
+      "name": "Kamchatka Territory",
+      "region": "RU-KAM",
+      "data": {
+        "2013": {
+          "population": 320600
+        },
+        "2014": {
+          "population": 319900
+        },
+        "2015": {
+          "population": 317200
+        },
+        "2016": {
+          "population": 316100
+        },
+        "2017": {
+          "population": 314700
+        }
+      }
+    },
+    {
+      "name": "Khabarovsk Territory",
+      "region": "RU-KHA",
+      "data": {
+        "2013": {
+          "population": 1342100
+        },
+        "2014": {
+          "population": 1339900
+        },
+        "2015": {
+          "population": 1338300
+        },
+        "2016": {
+          "population": 1334500
+        },
+        "2017": {
+          "population": 1333300
+        }
+      }
+    },
+    {
+      "name": "Amur Region",
+      "region": "RU-AMU",
+      "data": {
+        "2013": {
+          "population": 816900
+        },
+        "2014": {
+          "population": 811300
+        },
+        "2015": {
+          "population": 809900
+        },
+        "2016": {
+          "population": 805700
+        },
+        "2017": {
+          "population": 801800
+        }
+      }
+    },
+    {
+      "name": "Magadan Region",
+      "region": "RU-MAG",
+      "data": {
+        "2013": {
+          "population": 152300
+        },
+        "2014": {
+          "population": 150300
+        },
+        "2015": {
+          "population": 148100
+        },
+        "2016": {
+          "population": 146400
+        },
+        "2017": {
+          "population": 145600
+        }
+      }
+    },
+    {
+      "name": "Sakhalin Region",
+      "region": "RU-SAK",
+      "data": {
+        "2013": {
+          "population": 493300
+        },
+        "2014": {
+          "population": 491000
+        },
+        "2015": {
+          "population": 488400
+        },
+        "2016": {
+          "population": 487300
+        },
+        "2017": {
+          "population": 487400
+        }
+      }
+    },
+    {
+      "name": "Jewish Autonomous Region",
+      "region": "RU-YEV",
+      "data": {
+        "2013": {
+          "population": 172700
+        },
+        "2014": {
+          "population": 170400
+        },
+        "2015": {
+          "population": 168400
+        },
+        "2016": {
+          "population": 166100
+        },
+        "2017": {
+          "population": 164200
+        }
+      }
+    },
+    {
+      "name": "Chukotka Autonomous Area",
+      "region": "RU-CHU",
+      "data": {
+        "2013": {
+          "population": 50800
+        },
+        "2014": {
+          "population": 50500
+        },
+        "2015": {
+          "population": 50500
+        },
+        "2016": {
+          "population": 50200
+        },
+        "2017": {
+          "population": 49800
+        }
+      }
+    },
+    {
+      "name": "Chechen Republic and Republic of Ingushetia",
+      "region": "RU-CE & RU-IN",
+      "data": {
+        "2013": {
+          "population": 1767100
+        },
+        "2014": {
+          "population": 1799400
+        },
+        "2015": {
+          "population": 1834200
+        },
+        "2016": {
+          "population": 1867000
+        },
+        "2017": {
+          "population": 1895400
+        }
+      }
+    }
+  ]
+}

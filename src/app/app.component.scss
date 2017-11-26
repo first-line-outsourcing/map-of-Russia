@@ -18,14 +18,14 @@
     fill: orange;
   }
 
-  .circle {
+  .city {
     fill: #67a9cf;
     stroke: #fff;
     opacity: 0.65;
     cursor: pointer;
   }
 
-  .circle.active{
+  .city.active {
     opacity: 0.9;
     stroke: #555;
     stroke-width: 1;
@@ -40,6 +40,14 @@
     background: rgba(0, 0, 0, 0.7);
   }
 
+  .name-region {
+    font-size: 3px;
+  }
+
+}
+
+svg {
+  border: solid 5px #f1f0f2;
 }
 
 

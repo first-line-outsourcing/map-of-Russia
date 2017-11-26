@@ -24,6 +24,7 @@ export class GeoChart {
   private zoom;
   private g;
   private active;
+  private features;
 
   constructor(node: Element, options: GeoChartOptions) {
     this.options = options;
@@ -31,7 +32,7 @@ export class GeoChart {
     this.active = d3.select(null);
     this.$chart = d3.select(this.chartNode)
       .attr('width', this.options.width)
-      .attr('height', this.options.height + 50)
+      .attr('height', this.options.height)
       .on('click', this.stopped, true);
 
     this.$chart.append('rect')
@@ -50,7 +51,7 @@ export class GeoChart {
       .rotate([-105, 0])
       .center([-10, 65])
       .parallels([52, 64])
-      .scale(750)
+      .scale(700)
       .translate([this.options.width / 2, this.options.height / 2]);
 
     this.path = d3.geoPath().projection(this.projection);
@@ -59,37 +60,25 @@ export class GeoChart {
 
     const q = queue.queue()
       .defer(d3.json, this.options.map)
-      .defer(d3.tsv, this.options.mapData);
-
-    if (this.options.cities) {
-      q.defer(d3.json, this.options.cities);
-    }
+      .defer(d3.json, this.options.mapData);
 
     q.await(this.ready.bind(this));
   }
 
-  public ready(error, map, data, cities?) {
-    if (error) {
-      throw error;
+  public showCities(isShow: boolean) {
+    if (!this.options.cities) {
+      return;
     }
-    const features = topojson.feature(map, map.objects.russia).features;
-    features.forEach((item) => {
-      const findRegion = data.find((region) => region.region === item.properties.region);
-      item.properties.name = findRegion.name;
-      item.properties.population = findRegion.population;
-    });
 
-    this.g
-      .selectAll('path')
-      .data(features)
-      .enter()
-      .append('path')
-      .attr('d', this.path)
-      .attr('class', 'feature')
-      .on('click', this.clickedRegion.bind(this));
+    if (!isShow) {
+      this.g.selectAll('.city').remove();
+      this.g.selectAll('.name-city').remove();
+      this.g.selectAll('.legend').remove();
+      return;
+    }
 
-    if (cities) {
-      const citiesMap = this.g.selectAll('circle')
+    d3.json(this.options.cities, (cities) => {
+      const citiesMap = this.g.selectAll('city')
         .data(cities.cities)
         .enter();
 
@@ -100,13 +89,14 @@ export class GeoChart {
           const population = d.population.find((item) => item.year === this.options.year).amount / 1000;
           return population >= 10 ? 15 : population < 10 && population >= 5 ? 10 : 5;
         })
-        .attr('class', 'circle')
+        .attr('class', 'city')
         .on('click', this.clickedCity.bind(this));
 
       citiesMap.append('text')
         .attr('x', d => this.projection([d.lon, d.lat])[0])
         .attr('y', d => this.projection([d.lon, d.lat])[1])
         .style('font-size', '6px')
+        .attr('class', 'name-city')
         .text((d) => d.name);
 
       // add legend
@@ -150,8 +140,83 @@ export class GeoChart {
         .attr('x', 15)
         .attr('y', 12)
         .text('< 5m');
-    }
+    });
+  }
 
+  public showNameOfRegions(isShow: boolean) {
+    if (!isShow) {
+      this.g.selectAll('.name-region').remove();
+      return;
+    }
+    this.g.selectAll('name-region')
+      .data(this.features.filter((item) => {
+        const centroid = this.path.centroid(item);
+        return !isNaN(centroid[0]) && !isNaN(centroid[1]) && (item.properties.AREA > 2000000000 || item.properties.region === 'RU-KGD');
+      }))
+      .enter()
+      .append('text')
+      .attr('class', 'name-region')
+      .attr('transform', (d) => {
+        const centroid = this.path.centroid(d);
+        return 'translate(' + centroid[0] + ',' + centroid[1] + ')';
+      })
+      .attr('text-anchor', 'middle')
+      .attr('y', '.35em')
+      .text((d) => d.properties.name);
+  }
+
+  public updateData(year: number, type: string) {
+    this.options.year = year;
+    switch (type) {
+      case 'city':
+        d3.json(this.options.cities, (cities) => {
+          this.g.selectAll('city')
+            .data(cities.cities)
+            .enter();
+        });
+        break;
+      case 'region':
+        d3.json(this.options.mapData, (data) => {
+          this.features.forEach((item) => {
+            const findRegion = data.regions.find((region) => region.region === item.properties.region);
+            if (findRegion) {
+              item.properties.name = findRegion.name;
+              item.properties.population = findRegion.data[this.options.year].population;
+            }
+          });
+
+          this.g
+            .selectAll('path')
+            .data(this.features)
+            .enter();
+        });
+        break;
+      default:
+        return;
+    }
+  }
+
+  private ready(error, map, data) {
+    if (error) {
+      throw error;
+    }
+    this.features = topojson.feature(map, map.objects.russia).features;
+    this.features.forEach((item) => {
+      const findRegion = data.regions.find((region) => region.region === item.properties.region);
+      if (findRegion) {
+        item.properties.name = findRegion.name;
+        item.properties.population = findRegion.data[this.options.year].population;
+      }
+    });
+
+    this.g
+      .selectAll('path')
+      .data(this.features)
+      .enter()
+      .append('path')
+      .attr('d', this.path)
+      .attr('class', 'feature')
+      .on('click', this.clickedRegion.bind(this));
   }
 
   private clickedRegion(d) {
@@ -171,7 +236,7 @@ export class GeoChart {
     const translate = [this.options.width / 2 - scale * x, this.options.height / 2 - scale * y];
 
     this.$chart.transition()
-      .duration(750)
+      .duration(1000)
       .call(this.zoom.transform, d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale));
 
     this.clickOnRegion.emit(d.properties);
@@ -198,7 +263,7 @@ export class GeoChart {
     this.active = d3.select(null);
 
     this.$chart.transition()
-      .duration(750)
+      .duration(1000)
       .call(this.zoom.transform, d3.zoomIdentity);
 
     this.clickOnRegion.emit(null);

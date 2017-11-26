@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { GeoChart } from './geo.chart';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,21 +10,50 @@ import { GeoChart } from './geo.chart';
 export class AppComponent implements OnInit {
   @ViewChild('geoChart') public geoChart: ElementRef;
   public regionData;
+  public years = [2013, 2014, 2015, 2016, 2017];
+  public optionsForm: FormGroup;
+  public yearsForm: FormControl;
+  public citiesForm: FormControl;
   public options = {
-    width: 1000,
+    width: 930,
     height: 550,
     map: '../assets/geo-data/russia_1e-7sr.json',
-    mapData: '../assets/geo-data/russia-region-data.tsv',
+    mapData: '../assets/geo-data/russia-region-data.json',
     cities: '../assets/geo-data/russia-cities.json',
-    year: 2015
+    year: 2017
   };
 
   public ngOnInit() {
-    const chart = new GeoChart(this.geoChart.nativeElement, this.options);
 
+    this.optionsForm = new FormGroup({
+      years: new FormControl(2017),
+      city: new FormControl(false),
+      regions: new FormControl(false)
+    });
+
+    const chart = new GeoChart(this.geoChart.nativeElement, this.options);
     chart.clickOnRegion.subscribe((data) => {
       this.regionData = data;
     });
+
+    this.optionsForm.get('years').valueChanges
+      .subscribe((year) => {
+        chart.updateData(parseInt(year, 10), 'city');
+        chart.updateData(parseInt(year, 10), 'region');
+      });
+
+    this.optionsForm.get('city').valueChanges
+      .subscribe((checked) => {
+        chart.showCities(checked);
+        if (!checked) {
+          this.regionData = null;
+        }
+      });
+
+    this.optionsForm.get('regions').valueChanges
+      .subscribe((checked) => {
+        chart.showNameOfRegions(checked);
+      });
   }
 
   public getPopulation() {
