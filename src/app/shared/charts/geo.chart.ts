@@ -3,6 +3,7 @@ import { EventEmitter } from '@angular/core';
 import * as d3 from 'd3';
 import * as queue from 'd3-queue';
 import * as topojson from 'topojson';
+import { randomNumber } from '../helper';
 
 export interface GeoChartOptions {
   width: number;
@@ -87,7 +88,18 @@ export class GeoChart {
         .attr('cy', d => this.projection([d.lon, d.lat])[1])
         .attr('r', d => {
           const population = d.population.find((item) => item.year === this.options.year).amount / 1000;
-          return population >= 10 ? 15 : population < 10 && population >= 5 ? 10 : 5;
+          if (population >= 10) {
+            return 20;
+          }
+
+          if (population >= 5 && population < 10) {
+            return 15;
+          }
+
+          if (population >= 1 && population < 5) {
+            return 10;
+          }
+          return 5;
         })
         .attr('class', 'city')
         .on('click', this.clickedCity.bind(this));
@@ -102,45 +114,112 @@ export class GeoChart {
       // add legend
       const legend = this.g.append('g')
         .attr('class', 'legend')
-        .attr('transform', `translate(120,${this.options.height - 230})`)
+        .attr('transform', `translate(80,${this.options.height - 180})`)
         .style('font-size', '4px');
 
-      legend.append('circle')
-        .attr('cx', 20)
-        .attr('cy', 0)
-        .attr('r', 15)
-        .style('fill', 'white')
-        .style('stroke', 'black');
+      const legendData = [
+        { r: 20, name: '> 10m' },
+        { r: 15, name: '> 5m' },
+        { r: 10, name: '> 1m' },
+        { r: 5, name: '< 1m' }
+      ];
+      const startX = 20;
+      let startY = 0;
+      legendData.forEach((item) => {
+        legend.append('circle')
+          .attr('cx', startX)
+          .attr('cy', startY)
+          .attr('r', item.r)
+          .style('fill', 'white')
+          .style('stroke', 'black');
 
-      legend.append('text')
-        .attr('x', 15)
-        .attr('y', -10)
-        .text('> 10m');
+        legend.append('text')
+          .attr('x', startX + 26)
+          .attr('y', startY - item.r - 1)
+          .text(item.name);
 
-      legend.append('circle')
-        .attr('cx', 20)
-        .attr('cy', 5)
-        .attr('r', 10)
-        .style('fill', 'white')
-        .style('stroke', 'black');
-
-      legend.append('text')
-        .attr('x', 15)
-        .attr('y', 0)
-        .text('> 5m');
-
-      legend.append('circle')
-        .attr('cx', 20)
-        .attr('cy', 10)
-        .attr('r', 5)
-        .style('fill', 'white')
-        .style('stroke', 'black');
-
-      legend.append('text')
-        .attr('x', 15)
-        .attr('y', 12)
-        .text('< 5m');
+        legend.append('line')
+          .attr('x1', startX)
+          .attr('y1', startY - item.r)
+          .attr('x2', startX + 40)
+          .attr('y2', startY - item.r)
+          .style('stroke', 'black');
+        startY += 5;
+      });
     });
+  }
+
+  public showDensity(isShow: boolean) {
+    const extColorDomain = [0, 0.2, 0.4, 0.6, 0.8, 1];
+    const rangeColors = ['#fff', '#adfcad', '#ffcb40', '#ff7d73', '#ff4e40', '#ff1300'];
+
+    const color = d3.scaleThreshold()
+      .domain(extColorDomain)
+      .range(rangeColors);
+
+    const x = d3.scaleLinear()
+      .domain([0, 1])
+      .range([0, 240]);
+
+    const xAxis = d3.axisBottom(x)
+      .tickSize(13)
+      .tickValues(color.domain())
+      .tickFormat((d) => d3.format('.0f')(d * 100));
+
+    const legend = this.$chart
+      .append('g')
+      .attr('transform', `translate(10,${this.options.height - 40})`)
+      .attr('class', 'legend-density')
+      .call(xAxis);
+
+    legend.selectAll('rect')
+      .data(color.range().map((c) => {
+        const d = color.invertExtent(c);
+        if (d[0] == null) {
+          d[0] = x.domain()[0];
+        }
+        if (d[1] == null) {
+          d[1] = x.domain()[1];
+        }
+        return d;
+      }))
+      .enter()
+      .insert('rect', '.tick')
+      .attr('height', 8)
+      .attr('x', (d) => x(d[0]))
+      .attr('width', (d) => x(d[1]) - x(d[0]))
+      .attr('fill', (d) => color(d[0]));
+
+
+    if (!isShow) {
+      this.g
+        .selectAll('.feature')
+        .style('fill', '#ccc');
+
+      this.$chart
+        .selectAll('.legend-density').remove();
+      return;
+    }
+    this.g
+      .selectAll('.feature')
+      .style('fill', (d) => {
+        const density = d.properties.density;
+        if (density < 20) {
+          return rangeColors[1];
+        }
+        if (density >= 20 && density < 40) {
+          return rangeColors[2];
+        }
+        if (density >= 40 && density < 60) {
+          return rangeColors[3];
+        }
+        if (density >= 60 && density < 80) {
+          return rangeColors[4];
+        }
+        if (density >= 80) {
+          return rangeColors[5];
+        }
+      });
   }
 
   public showNameOfRegions(isShow: boolean) {
@@ -165,34 +244,34 @@ export class GeoChart {
       .text((d) => d.properties.name);
   }
 
-  public updateData(year: number, type: string) {
+  public updateData(year: number, value) {
     this.options.year = year;
-    switch (type) {
-      case 'city':
-        d3.json(this.options.cities, (cities) => {
-          this.g.selectAll('city')
-            .data(cities.cities)
-            .enter();
-        });
-        break;
-      case 'region':
-        d3.json(this.options.mapData, (data) => {
-          this.features.forEach((item) => {
-            const findRegion = data.regions.find((region) => region.region === item.properties.region);
-            if (findRegion) {
-              item.properties.name = findRegion.name;
-              item.properties.population = findRegion.data[this.options.year].population;
-            }
-          });
+    // updating data of cities
+    d3.json(this.options.cities, (cities) => {
+      this.g.selectAll('city')
+        .data(cities.cities)
+        .enter();
+    });
+    // updating data of regions
+    d3.json(this.options.mapData, (data) => {
+      this.features.forEach((item) => {
+        const findRegion = data.regions.find((region) => region.region === item.properties.region);
+        if (findRegion) {
+          item.properties.name = findRegion.name;
+          item.properties.population = findRegion.data[this.options.year].population;
+        }
+      });
 
-          this.g
-            .selectAll('path')
-            .data(this.features)
-            .enter();
-        });
-        break;
-      default:
-        return;
+      this.g
+        .selectAll('path')
+        .data(this.features)
+        .enter();
+    });
+    // updating data of density of populations
+    this.features.forEach((item) => item.properties.density = randomNumber(10, 100));
+    if (value.density) {
+      this.showDensity(false);
+      this.showDensity(true);
     }
   }
 
@@ -200,12 +279,14 @@ export class GeoChart {
     if (error) {
       throw error;
     }
+
     this.features = topojson.feature(map, map.objects.russia).features;
     this.features.forEach((item) => {
       const findRegion = data.regions.find((region) => region.region === item.properties.region);
       if (findRegion) {
         item.properties.name = findRegion.name;
         item.properties.population = findRegion.data[this.options.year].population;
+        item.properties.density = randomNumber(10, 100);
       }
     });
 
@@ -263,7 +344,7 @@ export class GeoChart {
     this.active = d3.select(null);
 
     this.$chart.transition()
-      .duration(1000)
+      .duration(1200)
       .call(this.zoom.transform, d3.zoomIdentity);
 
     this.clickOnRegion.emit(null);

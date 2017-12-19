@@ -6,7 +6,19 @@
   </div>
   <div class="row d-flex justify-content-center">
     <div class="col-10">
-      <svg #geoChart></svg>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <svg #geoChart></svg>
+          </div>
+        </div>
+        <div class="row" *ngIf="isShowLife">
+          <div class="col">
+            <h2>Average life expectancy</h2>
+            <svg #barChart></svg>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="col-2" [formGroup]="optionsForm">
       <div class="row">
@@ -45,9 +57,28 @@
       </div>
       <div class="row">
         <div class="col">
+          <label class="custom-control custom-checkbox">
+            <input formControlName="density" type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Density of population</span>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label class="custom-control custom-checkbox">
+            <input formControlName="life" type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Average life expectancy</span>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
           <div class="p-2 text-center text-info" *ngIf="regionData">
             <p>{{regionData.name}}</p>
             <p>Population: {{getPopulation() | split}}</p>
+            <p *ngIf="regionData.density">Density of population: {{regionData.density}} person per square kilometer</p>
           </div>
         </div>
       </div>

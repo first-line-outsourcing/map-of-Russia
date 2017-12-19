@@ -15,7 +15,7 @@
   }
 
   .feature.active {
-    fill: orange;
+    fill: orange !important;
   }
 
   .city {
@@ -44,10 +44,29 @@
     font-size: 3px;
   }
 
+  .bar-chart line {
+    stroke: #c1c1c1;
+  }
+
+  .bar-chart .score {
+    fill: white;
+  }
+
+  .bar-chart .main-category-bar {
+    stroke: #FF4A4A;
+    stroke-width: 2px;
+  }
+
 }
 
 svg {
   border: solid 5px #f1f0f2;
+}
+
+.form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid grey;
 }
 
 
