@@ -8,10 +8,6 @@ export class DataMap {
   public loadData = new EventEmitter<any>();
   private dataMap = [];
 
-  constructor() {
-
-  }
-
   public loadMapData(source: string) {
     d3.json(source, (data) => {
       this.dataMap = data.regions;

@@ -95,8 +95,9 @@
               <hr>
               <small>Population: {{getPopulation() | split}}</small>
               <hr>
-              <small *ngIf="regionData.density">Density of population: {{regionData.density}} person per square
-                kilometer</small>
+              <small *ngIf="regionData.density">
+                Density of population: {{regionData.density}} person per square kilometer
+              </small>
             </div>
           </div>
         </div>
@@ -104,23 +105,25 @@
     </div>
     <div class="trade-tooltip small" *ngIf="selectedTrade">
       <div class="mb-2">
-        <h6>{{selectedTrade.source.name}} imported from {{selectedTrade.target.name}} :
-          {{selectedTrade.source.value}}M RUB</h6>
-        <small>{{calcPercent(selectedTrade, 'source')}}% of {{selectedTrade.source.name}} Total (RUB
-          {{selectedTrade.source.total | split}}M)
+        <h6>
+          {{selectedTrade.source.name}} imported from {{selectedTrade.target.name}} : {{selectedTrade.source.value}}M RUB
+        </h6>
+        <small>
+          {{calcPercent(selectedTrade, 'source')}}% of {{selectedTrade.source.name}} Total (RUB {{selectedTrade.source.total | split}}M)
         </small>
-        <small>{{calcPercent(selectedTrade, 'source', selectedTrade.total)}}% of Total of RUB {{selectedTrade.total |
-          split}}M
+        <small>
+          {{calcPercent(selectedTrade, 'source', selectedTrade.total)}}% of Total of RUB {{selectedTrade.total | split}}M
         </small>
       </div>
       <div>
-        <h6>{{selectedTrade.target.name}} imported from {{selectedTrade.source.name}} :
-          {{selectedTrade.target.value}}M RUB</h6>
-        <small>{{calcPercent(selectedTrade, 'target')}}% of {{selectedTrade.target.name}} Total (RUB
-          {{selectedTrade.target.total | split}}M)
+        <h6>
+          {{selectedTrade.target.name}} imported from {{selectedTrade.source.name}} : {{selectedTrade.target.value}}M RUB
+        </h6>
+        <small>
+          {{calcPercent(selectedTrade, 'target')}}% of {{selectedTrade.target.name}} Total (RUB {{selectedTrade.target.total | split}}M)
         </small>
-        <small>{{calcPercent(selectedTrade, 'target', selectedTrade.total)}}% of Total of RUB {{selectedTrade.total |
-          split}}M
+        <small>
+          {{calcPercent(selectedTrade, 'target', selectedTrade.total)}}% of Total of RUB {{selectedTrade.total | split}}M
         </small>
       </div>
     </div>

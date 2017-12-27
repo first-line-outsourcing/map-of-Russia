@@ -1,5 +1,7 @@
 import { EventEmitter } from '@angular/core';
+
 import * as d3 from 'd3';
+
 import { randomNumber } from '../helper';
 
 export interface ChordChartOptions {
@@ -70,9 +72,7 @@ export class ChordChart {
 
     group
       .append('text')
-      .each(function (d) {
-        d.angle = (d.startAngle + d.endAngle) / 2;
-      })
+      .each((d) => d.angle = (d.startAngle + d.endAngle) / 2)
       .attr('dy', '.35em')
       .style('font-family', 'helvetica, arial, sans-serif')
       .style('font-size', '10px')

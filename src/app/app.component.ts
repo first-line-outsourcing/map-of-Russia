@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   @ViewChild('geoChart') public geoChart: ElementRef;
   @ViewChild('barChart') public barChart: ElementRef;
   @ViewChild('chordChart') public chordChart: ElementRef;
+
   public regionData;
   public selectedTrade;
   public years = [2013, 2014, 2015, 2016, 2017];
@@ -42,8 +43,9 @@ export class AppComponent implements OnInit {
 
     this.dataMap = new DataMap();
     this.dataMap.loadData.subscribe((data) => {
+      const width = 930;
       this.geoOptions = {
-        width: 930,
+        width,
         height: 550,
         map: '../assets/geo-data/russia.json',
         mapData: data,
@@ -51,14 +53,14 @@ export class AppComponent implements OnInit {
         year: 2017
       };
       this.barOptions = {
-        width: 930,
+        width,
         barHeight: 25,
         mapData: data,
         year: 2017
       };
 
       this.chordOptions = {
-        width: 930,
+        width,
         height: 800,
         mapData: data
       };
