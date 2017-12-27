@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
       this.geoOptions = {
         width: 930,
         height: 550,
-        map: '../assets/geo-data/russia_1e-7sr.json',
+        map: '../assets/geo-data/russia.json',
         mapData: data,
         cities: '../assets/geo-data/russia-cities.json',
         year: 2017
