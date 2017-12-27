@@ -3,13 +3,12 @@ import { EventEmitter } from '@angular/core';
 import * as d3 from 'd3';
 import * as queue from 'd3-queue';
 import * as topojson from 'topojson';
-import { randomNumber } from '../helper';
 
 export interface GeoChartOptions {
   width: number;
   height: number;
   map: string;
-  mapData: string;
+  mapData: any;
   cities?: string;
   year?: number;
 }
@@ -60,8 +59,7 @@ export class GeoChart {
     this.$chart.call(this.zoom);
 
     const q = queue.queue()
-      .defer(d3.json, this.options.map)
-      .defer(d3.json, this.options.mapData);
+      .defer(d3.json, this.options.map);
 
     q.await(this.ready.bind(this));
   }
@@ -126,13 +124,6 @@ export class GeoChart {
       const startX = 20;
       let startY = 0;
       legendData.forEach((item) => {
-        legend.append('circle')
-          .attr('cx', startX)
-          .attr('cy', startY)
-          .attr('r', item.r)
-          .style('fill', 'white')
-          .style('stroke', 'black');
-
         legend.append('text')
           .attr('x', startX + 26)
           .attr('y', startY - item.r - 1)
@@ -144,6 +135,14 @@ export class GeoChart {
           .attr('x2', startX + 40)
           .attr('y2', startY - item.r)
           .style('stroke', 'black');
+
+        legend.append('circle')
+          .attr('cx', startX)
+          .attr('cy', startY)
+          .attr('r', item.r)
+          .style('fill', 'white')
+          .style('stroke', 'black');
+
         startY += 5;
       });
     });
@@ -252,41 +251,42 @@ export class GeoChart {
         .data(cities.cities)
         .enter();
     });
-    // updating data of regions
-    d3.json(this.options.mapData, (data) => {
-      this.features.forEach((item) => {
-        const findRegion = data.regions.find((region) => region.region === item.properties.region);
-        if (findRegion) {
-          item.properties.name = findRegion.name;
-          item.properties.population = findRegion.data[this.options.year].population;
-        }
-      });
 
-      this.g
-        .selectAll('path')
-        .data(this.features)
-        .enter();
+    // updating data of regions
+    this.features.forEach((item) => {
+      const findRegion = this.options.mapData.find((region) => region.region === item.properties.region);
+      if (findRegion) {
+        item.properties.name = findRegion.name;
+        item.properties.population = findRegion.data[this.options.year].population;
+        item.properties.density = findRegion.data[this.options.year].density;
+        item.properties.death = findRegion.data[this.options.year].death;
+      }
     });
+
+    this.g
+      .selectAll('path')
+      .data(this.features)
+      .enter();
+
     // updating data of density of populations
-    this.features.forEach((item) => item.properties.density = randomNumber(10, 100));
     if (value.density) {
       this.showDensity(false);
       this.showDensity(true);
     }
   }
 
-  private ready(error, map, data) {
+  private ready(error, map) {
     if (error) {
       throw error;
     }
 
     this.features = topojson.feature(map, map.objects.russia).features;
     this.features.forEach((item) => {
-      const findRegion = data.regions.find((region) => region.region === item.properties.region);
+      const findRegion = this.options.mapData.find((region) => region.region === item.properties.region);
       if (findRegion) {
         item.properties.name = findRegion.name;
         item.properties.population = findRegion.data[this.options.year].population;
-        item.properties.density = randomNumber(10, 100);
+        item.properties.density = findRegion.data[this.options.year].density;
       }
     });
 

@@ -1,10 +1,10 @@
 import * as d3 from 'd3';
-import { randomNumber } from '../helper';
 
 export interface BarChartOptions {
   width: number;
-  mapData: string;
+  mapData: any;
   barHeight: number;
+  year: number;
 }
 
 export class BarChart {
@@ -16,18 +16,19 @@ export class BarChart {
   private g;
   private height: number;
 
-  constructor(node: Element, options: BarChartOptions) {
+  constructor(node: Element, options: BarChartOptions, activeRegion?: string) {
     this.options = options;
     this.chartNode = node;
-    d3.json(this.options.mapData, (data) => {
-      data.regions.forEach((item) => this.dataBar.push({
-        name: item.name,
-        region: item.region,
-        death: randomNumber(50, 100)
-      }));
-      this.dataBar = this.dataBar.sort((a, b) => a.death > b.death ? -1 : a.death < b.death ? 1 : 0);
-      this.init();
-    });
+    this.dataBar = this.options.mapData
+      .map((item) => {
+        return {
+          name: item.name,
+          region: item.region,
+          data: item.data[this.options.year]
+        };
+      })
+      .sort((a, b) => a.data.death > b.data.death ? -1 : a.data.death < b.data.death ? 1 : 0);
+    this.init(activeRegion);
   }
 
   public selectRegion(region: string) {
@@ -36,14 +37,21 @@ export class BarChart {
       .classed('main-category-bar', (d) => region && d.region === region);
   }
 
-  public updateData() {
-    this.dataBar.forEach((item) => item.death = randomNumber(50, 100));
-    this.dataBar = this.dataBar.sort((a, b) => a.death > b.death ? -1 : a.death < b.death ? 1 : 0);
+  public updateData(options: BarChartOptions, activeRegion?: string) {
+    this.dataBar = this.options.mapData
+      .map((item) => {
+        return {
+          name: item.name,
+          region: item.region,
+          data: item.data[options.year]
+        };
+      })
+      .sort((a, b) => a.data.death > b.data.death ? -1 : a.data.death < b.data.death ? 1 : 0);
     this.g.remove();
-    this.init();
+    this.init(activeRegion);
   }
 
-  private init() {
+  private init(activeRegion?: string) {
     this.height = (this.options.barHeight + 4) * (this.dataBar.length - 1);
     this.active = d3.select(null);
     this.$chart = d3.select(this.chartNode)
@@ -53,7 +61,7 @@ export class BarChart {
       .on('click', this.stopped, true);
 
     const x = d3.scaleLinear()
-      .domain([0, d3.max(this.dataBar.map((item) => item.death))])
+      .domain([0, d3.max(this.dataBar.map((item) => item.data.death))])
       .range([0, this.options.width - 30]);
 
     const y = d3.scaleBand()
@@ -85,20 +93,21 @@ export class BarChart {
       .attr('x', 0)
       .attr('y', (d) => y(d.name) + 10)
       .attr('name', (d) => d.name)
-      .attr('width', (d) => x(d.death))
+      .attr('width', (d) => x(d.data.death))
       .attr('height', this.options.barHeight)
-      .style('fill', (d) => `rgba(109, 184, 255, ${d.death / 100})`);
+      .style('fill', (d) => `rgba(109, 184, 255, ${d.data.death / 100})`)
+      .classed('main-category-bar', (d) => activeRegion && d.region === activeRegion);
 
     this.g.selectAll('text.score')
       .data(this.dataBar)
       .enter().append('text')
-      .attr('x', (d) => x(d.death))
+      .attr('x', (d) => x(d.data.death))
       .attr('y', (d) => y(d.name) + y.bandwidth() / 2)
       .attr('dx', -5)
       .attr('dy', '.9rem')
       .attr('text-anchor', 'end')
       .attr('class', 'score')
-      .text((d) => `${d.death} age`);
+      .text((d) => `${d.data.death} age`);
 
     this.g.selectAll('text.name')
       .data(this.dataBar)

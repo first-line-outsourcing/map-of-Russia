@@ -1,8 +1,10 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { BarChart } from './shared/charts/bar.chart';
+import { DataMap } from './data-map';
+import { BarChart, BarChartOptions } from './shared/charts/bar.chart';
+import { ChordChart, ChordChartOptions } from './shared/charts/chord.chart';
 
-import { GeoChart } from './shared/charts/geo.chart';
+import { GeoChart, GeoChartOptions } from './shared/charts/geo.chart';
 
 @Component({
   selector: 'app-root',
@@ -12,25 +14,20 @@ import { GeoChart } from './shared/charts/geo.chart';
 export class AppComponent implements OnInit {
   @ViewChild('geoChart') public geoChart: ElementRef;
   @ViewChild('barChart') public barChart: ElementRef;
+  @ViewChild('chordChart') public chordChart: ElementRef;
   public regionData;
+  public selectedTrade;
   public years = [2013, 2014, 2015, 2016, 2017];
   public optionsForm: FormGroup;
-  public geoOptions = {
-    width: 930,
-    height: 550,
-    map: '../assets/geo-data/russia_1e-7sr.json',
-    mapData: '../assets/geo-data/russia-region-data.json',
-    cities: '../assets/geo-data/russia-cities.json',
-    year: 2017
-  };
-  public barOptions = {
-    width: 930,
-    barHeight: 25,
-    mapData: '../assets/geo-data/russia-region-data.json'
-  };
+  public geoOptions: GeoChartOptions;
+  public barOptions: BarChartOptions;
+  public chordOptions: ChordChartOptions;
   public isShowLife: boolean;
+  public isShowTrade: boolean;
+  private dataMap: DataMap;
   private chart$: GeoChart;
   private barChart$: BarChart;
+  private chordChart$: ChordChart;
 
   public ngOnInit() {
 
@@ -39,22 +36,53 @@ export class AppComponent implements OnInit {
       city: new FormControl(false),
       regions: new FormControl(false),
       density: new FormControl(false),
-      life: new FormControl(false)
+      life: new FormControl(false),
+      trade: new FormControl(false)
     });
 
-    this.chart$ = new GeoChart(this.geoChart.nativeElement, this.geoOptions);
+    this.dataMap = new DataMap();
+    this.dataMap.loadData.subscribe((data) => {
+      this.geoOptions = {
+        width: 930,
+        height: 550,
+        map: '../assets/geo-data/russia_1e-7sr.json',
+        mapData: data,
+        cities: '../assets/geo-data/russia-cities.json',
+        year: 2017
+      };
+      this.barOptions = {
+        width: 930,
+        barHeight: 25,
+        mapData: data,
+        year: 2017
+      };
 
-    this.chart$.clickOnRegion.subscribe((data) => {
-      this.regionData = data;
-      if (this.barChart$) {
-        this.barChart$.selectRegion(data ? data.region : null);
-      }
+      this.chordOptions = {
+        width: 930,
+        height: 800,
+        mapData: data
+      };
+
+      this.chart$ = new GeoChart(this.geoChart.nativeElement, this.geoOptions);
+
+      this.chart$.clickOnRegion.subscribe((clickedRegion) => {
+        this.regionData = clickedRegion;
+        if (this.barChart$) {
+          this.barChart$.selectRegion(clickedRegion ? clickedRegion.region : null);
+        }
+      });
     });
+    this.dataMap.loadMapData('../assets/geo-data/russia-region-data.json');
 
     this.optionsForm.get('years').valueChanges.subscribe((year) => {
-      this.chart$.updateData(parseInt(year, 10), this.optionsForm.value);
+      this.geoOptions.year = parseInt(year, 10);
+      this.barOptions.year = parseInt(year, 10);
+      this.chart$.updateData(this.geoOptions.year, this.optionsForm.value);
       if (this.barChart$) {
-        this.barChart$.updateData();
+        this.barChart$.updateData(this.barOptions, this.regionData ? this.regionData.region : null);
+      }
+      if (this.chordChart$) {
+        this.chordChart$.updateYear();
       }
     });
 
@@ -76,9 +104,22 @@ export class AppComponent implements OnInit {
     this.optionsForm.get('life').valueChanges.subscribe((checked) => {
       this.isShowLife = checked;
       if (!this.barChart$) {
-        setTimeout(() => this.barChart$ = new BarChart(this.barChart.nativeElement, this.barOptions));
+        setTimeout(() => this.barChart$ = new BarChart(this.barChart.nativeElement, this.barOptions,
+          this.regionData ? this.regionData.region : null));
       } else {
         this.barChart$ = null;
+      }
+    });
+
+    this.optionsForm.get('trade').valueChanges.subscribe((checked) => {
+      this.isShowTrade = checked;
+      if (!this.chordChart$) {
+        setTimeout(() => {
+          this.chordChart$ = new ChordChart(this.chordChart.nativeElement, this.chordOptions);
+          this.chordChart$.selectTrade.subscribe((data) => this.selectedTrade = data);
+        });
+      } else {
+        this.chordChart$ = null;
       }
     });
   }
@@ -88,5 +129,12 @@ export class AppComponent implements OnInit {
       return this.regionData.population.find((item) => item.year === this.geoOptions.year).amount + '000';
     }
     return this.regionData.population;
+  }
+
+  public calcPercent(trade, field: string, allTotals?: number) {
+    if (allTotals) {
+      return (trade[field].value / allTotals * 100).toFixed(1);
+    }
+    return (trade[field].value / trade[field].total * 100).toFixed(1);
   }
 }
