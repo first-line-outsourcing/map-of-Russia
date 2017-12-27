@@ -149,13 +149,13 @@ export class ChordChart {
   }
 
   private calcMatrix(mapData) {
-    const countRegions = 15;
+    const countRegions = 10;
     const startCountRegion = randomNumber(0, mapData.length - countRegions);
     const endCountRegion = startCountRegion + countRegions;
     this.totalValues = 0;
     this.matrix = Array.from({ length: endCountRegion - startCountRegion },
       () => Array.from({ length: endCountRegion - startCountRegion }, () => {
-        const probability = 30;
+        const probability = 40;
         const value = randomNumber(0, 100) < probability ? randomNumber(50, 1000) : 0;
         this.totalValues += value;
         return value;

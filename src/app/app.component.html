@@ -27,88 +27,101 @@
       </div>
     </div>
     <div class="col-2" [formGroup]="optionsForm">
-      <div class="row">
-        <div class="col">
-          <h5>Interactive legend</h5>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h5>Interactive legend</h5>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="form-group">
-            <label class="col-form-label" for="select-year">Selected year:</label>
-            <select formControlName="years" id="select-year" class="form-control">
-              <option [value]="year" *ngFor="let year of years">{{year}}</option>
-            </select>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label class="col-form-label" for="select-year">Selected year:</label>
+              <select formControlName="years" id="select-year" class="form-control">
+                <option [value]="year" *ngFor="let year of years">{{year}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="custom-control custom-checkbox">
+              <input formControlName="city" type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Cities</span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="custom-control custom-checkbox">
+              <input formControlName="regions" type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Name of regions</span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="custom-control custom-checkbox">
+              <input formControlName="density" type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Density of population</span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="custom-control custom-checkbox">
+              <input formControlName="life" type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Average life expectancy</span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="custom-control custom-checkbox">
+              <input formControlName="trade" type="checkbox" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Trade Flows</span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="p-2 text-center text-info" *ngIf="regionData">
+              <span>{{regionData.name}}</span>
+              <hr>
+              <small>Population: {{getPopulation() | split}}</small>
+              <hr>
+              <small *ngIf="regionData.density">Density of population: {{regionData.density}} person per square
+                kilometer</small>
+            </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <label class="custom-control custom-checkbox">
-            <input formControlName="city" type="checkbox" class="custom-control-input">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Cities</span>
-          </label>
-        </div>
+    </div>
+    <div class="trade-tooltip small" *ngIf="selectedTrade">
+      <div class="mb-2">
+        <h6>{{selectedTrade.source.name}} imported from {{selectedTrade.target.name}} :
+          {{selectedTrade.source.value}}M RUB</h6>
+        <small>{{calcPercent(selectedTrade, 'source')}}% of {{selectedTrade.source.name}} Total (RUB
+          {{selectedTrade.source.total | split}}M)
+        </small>
+        <small>{{calcPercent(selectedTrade, 'source', selectedTrade.total)}}% of Total of RUB {{selectedTrade.total |
+          split}}M
+        </small>
       </div>
-      <div class="row">
-        <div class="col">
-          <label class="custom-control custom-checkbox">
-            <input formControlName="regions" type="checkbox" class="custom-control-input">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Name of regions</span>
-          </label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <label class="custom-control custom-checkbox">
-            <input formControlName="density" type="checkbox" class="custom-control-input">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Density of population</span>
-          </label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <label class="custom-control custom-checkbox">
-            <input formControlName="life" type="checkbox" class="custom-control-input">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Average life expectancy</span>
-          </label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <label class="custom-control custom-checkbox">
-            <input formControlName="trade" type="checkbox" class="custom-control-input">
-            <span class="custom-control-indicator"></span>
-            <span class="custom-control-description">Trade Flows</span>
-          </label>
-        </div>
-        <div class="trade-tooltip small" *ngIf="selectedTrade">
-          <div class="mb-2">
-            <h6>{{selectedTrade.source.name}} imported from {{selectedTrade.target.name}} :
-              {{selectedTrade.source.value}}M RUB</h6>
-            <small>{{calcPercent(selectedTrade, 'source')}}% of {{selectedTrade.source.name}} Total (RUB {{selectedTrade.source.total | split}}M)</small>
-            <small>{{calcPercent(selectedTrade, 'source', selectedTrade.total)}}% of Total of RUB {{selectedTrade.total | split}}M</small>
-          </div>
-          <div>
-            <h6>{{selectedTrade.target.name}} imported from {{selectedTrade.source.name}} :
-              {{selectedTrade.target.value}}M RUB</h6>
-            <small>{{calcPercent(selectedTrade, 'target')}}% of {{selectedTrade.target.name}} Total (RUB {{selectedTrade.target.total | split}}M)</small>
-            <small>{{calcPercent(selectedTrade, 'target', selectedTrade.total)}}% of Total of RUB {{selectedTrade.total | split}}M</small>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <div class="p-2 text-center text-info" *ngIf="regionData">
-            <p>{{regionData.name}}</p>
-            <p>Population: {{getPopulation() | split}}</p>
-            <p *ngIf="regionData.density">Density of population: {{regionData.density}} person per square kilometer</p>
-          </div>
-        </div>
+      <div>
+        <h6>{{selectedTrade.target.name}} imported from {{selectedTrade.source.name}} :
+          {{selectedTrade.target.value}}M RUB</h6>
+        <small>{{calcPercent(selectedTrade, 'target')}}% of {{selectedTrade.target.name}} Total (RUB
+          {{selectedTrade.target.total | split}}M)
+        </small>
+        <small>{{calcPercent(selectedTrade, 'target', selectedTrade.total)}}% of Total of RUB {{selectedTrade.total |
+          split}}M
+        </small>
       </div>
     </div>
   </div>
