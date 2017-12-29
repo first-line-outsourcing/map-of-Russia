@@ -1,9 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+
 import { DataMap } from './data-map';
 import { BarChart, BarChartOptions } from './shared/charts/bar.chart';
 import { ChordChart, ChordChartOptions } from './shared/charts/chord.chart';
-
 import { GeoChart, GeoChartOptions } from './shared/charts/geo.chart';
 
 @Component({
