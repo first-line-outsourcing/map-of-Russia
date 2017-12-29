@@ -1,4 +1,5 @@
 # Map of Russia
+[Server stage](russia-map.bestmood.tech)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.2 and [d3](https://github.com/d3/d3).
 
